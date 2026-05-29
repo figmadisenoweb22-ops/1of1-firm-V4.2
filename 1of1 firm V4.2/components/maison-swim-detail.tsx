@@ -106,14 +106,14 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 items-center">
           <div>
             <span className="text-white/60 text-[8px] md:text-xs tracking-[0.2em] block mb-2 md:mb-4">MAISON SWIM</span>
-            <h1 className="text-2xl md:text-7xl font-bold tracking-tight leading-none mb-2 md:mb-6" style={{ fontFamily: 'serif' }}>
+            <h1 className="text-2xl md:text-6xl font-bold tracking-tight leading-none mb-2 md:mb-6" style={{ fontFamily: 'serif' }}>
               SWIM<br />WEAR
             </h1>
             <div className="flex items-center gap-1.5 md:gap-2 mb-2 md:mb-4">
               <div className="w-4 md:w-8 h-px bg-white/30"></div>
               <Sparkle />
             </div>
-            <p className="text-white/60 text-[8px] md:text-sm tracking-wider leading-relaxed max-w-sm">
+            <p className="text-white/60 text-[8px] md:text-xs tracking-wider leading-relaxed max-w-sm">
               TIMELESS SWIMWEAR.<br />
               CRAFTED FOR THE SUN.<br />
               DESIGNED TO MAKE<br />

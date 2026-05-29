@@ -59,7 +59,7 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 items-center">
           <div>
             <span className="text-white/60 text-[8px] md:text-xs tracking-[0.2em] block mb-2 md:mb-4">1 OF 1 UNIVERSE</span>
-            <h1 className="text-2xl md:text-7xl font-light tracking-tight leading-none mb-2 md:mb-6" style={{ fontFamily: 'serif' }}>
+            <h1 className="text-2xl md:text-6xl font-light tracking-tight leading-none mb-2 md:mb-6" style={{ fontFamily: 'serif' }}>
               CAMP
             </h1>
             <p className="text-amber-500 text-[8px] md:text-sm tracking-[0.15em] md:tracking-[0.2em] mb-2 md:mb-4">
@@ -71,7 +71,7 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
                 <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
               </svg>
             </div>
-            <p className="text-white/60 text-[8px] md:text-sm tracking-wider leading-relaxed max-w-sm">
+            <p className="text-white/60 text-[8px] md:text-xs tracking-wider leading-relaxed max-w-sm">
               FOR EMERGING AND<br />
               ESTABLISHED ARTISTS.<br />
               CREATE. INSPIRE.<br />
