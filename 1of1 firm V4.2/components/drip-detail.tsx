@@ -289,12 +289,6 @@ export default function DripDetail({ onNavigate }: DripDetailProps) {
             <span className="text-amber-500/70 text-xs tracking-[0.2em]">PRÓXIMAMENTE</span>
             <h2 className="text-3xl md:text-4xl font-light tracking-wider text-white mt-2 mb-4">DROP 02</h2>
             <p className="text-white/50 text-sm tracking-wider">STAY TUNED FOR MORE EXCLUSIVE PIECES</p>
-            <div>
-              style={{
-            backgroundImage: `url('https://f005.backblazeb2.com/file/b21of1firm/background/LLtarj.png')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
             </div>
           </div>
         </div>
