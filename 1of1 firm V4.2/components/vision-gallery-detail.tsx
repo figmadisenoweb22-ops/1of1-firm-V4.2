@@ -132,7 +132,7 @@ function ArtworkCard({ artwork }: { artwork: Artwork }) {
           <img 
             src={artwork.image} 
             alt={artwork.name}
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+            className="w-full h-full object-cover transition-all duration-500"
           />
         </div>
       </div>
