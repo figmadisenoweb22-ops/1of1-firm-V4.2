@@ -126,14 +126,16 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
           </div>
           
           {/* Imagen - Columna derecha en mobile */}
-          <div className="relative md:absolute md:inset-0 md:-z-10">
+          <div className="relative md:absolute md:inset-0 md:-z-10 overflow-hidden">
             <div 
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-right md:bg-center"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80')`
+                backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'right center',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/50 md:bg-gradient-to-r md:from-black md:via-black/70 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/70 md:bg-gradient-to-r md:from-black md:via-black/70 md:to-transparent" />
           </div>
         </div>
       </section>

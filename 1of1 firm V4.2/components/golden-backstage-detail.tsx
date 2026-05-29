@@ -102,14 +102,16 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
           </div>
           
           {/* Imagen - Columna derecha en mobile */}
-          <div className="relative md:absolute md:inset-0 md:-z-10">
+          <div className="relative md:absolute md:inset-0 md:-z-10 overflow-hidden">
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-right md:bg-center"
               style={{
-                backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0004-L3aDIdQwHCFiyitSfuKr4ora1ur0sB.jpg')`
+                backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0004-L3aDIdQwHCFiyitSfuKr4ora1ur0sB.jpg')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'right center',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/50 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/70 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-black/30" />
           </div>
         </div>
       </section>

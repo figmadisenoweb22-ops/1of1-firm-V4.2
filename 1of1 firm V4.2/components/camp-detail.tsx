@@ -91,14 +91,16 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
           </div>
           
           {/* Imagen - Columna derecha en mobile */}
-          <div className="relative md:absolute md:inset-0 md:-z-10">
+          <div className="relative md:absolute md:inset-0 md:-z-10 overflow-hidden">
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 bg-cover bg-right md:bg-center"
               style={{
                 backgroundImage: `url('https://f005.backblazeb2.com/file/b21of1firm/background/CAMPhome.jpg')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'right center',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/50 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/70 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-transparent" />
           </div>
         </div>
       </section>
