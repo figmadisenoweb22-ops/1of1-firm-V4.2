@@ -58,7 +58,7 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
       <section className="relative min-h-[50vh] md:min-h-[70vh] pt-20 md:pt-0">
         <div className="grid grid-cols-2 md:grid-cols-1 min-h-[50vh] md:min-h-[70vh]">
           {/* Contenido - Columna izquierda en mobile */}
-          <div className="relative z-10 flex flex-col justify-end p-3 md:p-12 pb-6 md:pb-16 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-transparent md:absolute md:inset-0 md:flex md:items-end">
+          <div className="relative z-10 flex flex-col justify-end p-3 md:p-12 pb-6 md:pb-16 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-none md:absolute md:inset-0 md:flex md:items-end">
             <div className="w-full max-w-2xl">
               <p className="text-white/70 text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-4">1 OF 1 UNIVERSE</p>
               
@@ -90,17 +90,15 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
             </div>
           </div>
           
-          {/* Imagen - Columna derecha en mobile */}
-          <div className="relative md:absolute md:inset-0 md:-z-10 overflow-hidden">
+          {/* Imagen - Columna derecha en mobile, fondo completo en web */}
+          <div className="relative md:absolute md:inset-0 md:z-0 overflow-hidden">
             <div
-              className="absolute inset-0 bg-cover bg-right md:bg-center"
+              className="absolute inset-0 bg-cover"
               style={{
                 backgroundImage: `url('https://f005.backblazeb2.com/file/b21of1firm/background/CAMPhome.jpg')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'right center',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/70 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/80 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-transparent" />
           </div>
         </div>
       </section>

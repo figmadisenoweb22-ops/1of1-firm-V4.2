@@ -105,7 +105,7 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
       <section className="relative min-h-[45vh] md:min-h-[60vh] pt-20 md:pt-0">
         <div className="grid grid-cols-2 md:grid-cols-1 min-h-[45vh] md:min-h-[60vh]">
           {/* Contenido - Columna izquierda en mobile */}
-          <div className="relative z-10 flex flex-col justify-end p-3 md:px-6 pb-6 md:pb-12 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-transparent md:absolute md:inset-0 md:flex md:items-end">
+          <div className="relative z-10 flex flex-col justify-end p-3 md:px-6 pb-6 md:pb-12 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-none md:absolute md:inset-0 md:flex md:items-end">
             <div className="max-w-lg">
               <p className="text-white/60 text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-4">MAISON SWIM</p>
               <h1 className="text-2xl md:text-7xl font-bold tracking-wide leading-none mb-1 md:mb-4">
@@ -125,17 +125,15 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
             </div>
           </div>
           
-          {/* Imagen - Columna derecha en mobile */}
-          <div className="relative md:absolute md:inset-0 md:-z-10 overflow-hidden">
+          {/* Imagen - Columna derecha en mobile, fondo completo en web */}
+          <div className="relative md:absolute md:inset-0 md:z-0 overflow-hidden">
             <div 
-              className="absolute inset-0 bg-cover bg-right md:bg-center"
+              className="absolute inset-0 bg-cover"
               style={{
                 backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'right center',
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/70 md:bg-gradient-to-r md:from-black md:via-black/70 md:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/80 md:bg-gradient-to-r md:from-black md:via-black/70 md:to-transparent" />
           </div>
         </div>
       </section>
