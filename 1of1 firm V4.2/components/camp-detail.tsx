@@ -95,7 +95,7 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0014-Ct5bg9GgOF6bXHD5DINx9EVqmEWr5W.jpg')`,
+                backgroundImage: `url('https://f005.backblazeb2.com/file/b21of1firm/background/CAMPhome.jpg')`,
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/50 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-transparent" />
