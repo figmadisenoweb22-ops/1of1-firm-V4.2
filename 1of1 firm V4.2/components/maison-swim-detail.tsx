@@ -101,39 +101,31 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
         </div>
       </header>
 
-      {/* Hero Section - Grid 2 columnas en mobile */}
-      <section className="relative min-h-[45vh] md:min-h-[60vh] pt-20 md:pt-0">
-        <div className="grid grid-cols-2 md:grid-cols-1 min-h-[45vh] md:min-h-[60vh]">
-          {/* Contenido - Columna izquierda en mobile */}
-          <div className="relative z-10 flex flex-col justify-end p-3 md:px-6 pb-6 md:pb-12 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-none md:absolute md:inset-0 md:flex md:items-end">
-            <div className="max-w-lg">
-              <p className="text-white/60 text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-4">MAISON SWIM</p>
-              <h1 className="text-2xl md:text-7xl font-bold tracking-wide leading-none mb-1 md:mb-4">
-                <span className="block">SWIM</span>
-                <span className="block">WEAR</span>
-              </h1>
-              <div className="flex items-center gap-1.5 md:gap-2 mb-1 md:mb-4">
-                <div className="w-4 md:w-8 h-px bg-white/40"></div>
-                <Sparkle />
-              </div>
-              <p className="text-white/70 text-[8px] md:text-sm tracking-wide leading-relaxed">
-                TIMELESS SWIMWEAR.<br />
-                CRAFTED FOR THE SUN.<br />
-                DESIGNED TO MAKE<br />
-                A STATEMENT.
-              </p>
+      {/* Hero Section - Mismo estilo que Vision Gallery */}
+      <section className="pt-24 pb-8 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 items-center">
+          <div>
+            <span className="text-white/60 text-[8px] md:text-xs tracking-[0.2em] block mb-2 md:mb-4">MAISON SWIM</span>
+            <h1 className="text-2xl md:text-7xl font-bold tracking-tight leading-none mb-2 md:mb-6" style={{ fontFamily: 'serif' }}>
+              SWIM<br />WEAR
+            </h1>
+            <div className="flex items-center gap-1.5 md:gap-2 mb-2 md:mb-4">
+              <div className="w-4 md:w-8 h-px bg-white/30"></div>
+              <Sparkle />
             </div>
+            <p className="text-white/60 text-[8px] md:text-sm tracking-wider leading-relaxed max-w-sm">
+              TIMELESS SWIMWEAR.<br />
+              CRAFTED FOR THE SUN.<br />
+              DESIGNED TO MAKE<br />
+              A STATEMENT.
+            </p>
           </div>
-          
-          {/* Imagen - Columna derecha en mobile, fondo completo en web */}
-          <div className="relative md:absolute md:inset-0 md:z-0 overflow-hidden">
-            <div 
-              className="absolute inset-0 bg-cover"
-              style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80')`,
-              }}
+          <div className="relative">
+            <img 
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80"
+              alt="Maison Swim"
+              className="w-full h-auto object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/80 md:bg-gradient-to-r md:from-black md:via-black/70 md:to-transparent" />
           </div>
         </div>
       </section>

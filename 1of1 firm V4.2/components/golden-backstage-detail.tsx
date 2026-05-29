@@ -83,33 +83,32 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
         </div>
       </header>
 
-      {/* Hero Section - Grid 2 columnas en mobile */}
-      <section className="relative min-h-[50vh] md:min-h-[70vh] pt-20 md:pt-0">
-        <div className="grid grid-cols-2 md:grid-cols-1 min-h-[50vh] md:min-h-[70vh]">
-          {/* Contenido - Columna izquierda en mobile */}
-          <div className="relative z-10 flex flex-col justify-end p-3 md:p-12 pb-6 md:pb-16 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-none md:absolute md:inset-0 md:flex md:items-end">
-            <div>
-              <h1 className="text-2xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
-                GOLDEN
-              </h1>
-              <h1 className="text-2xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
-                BACKSTAGE
-              </h1>
-              <p className="mt-2 md:mt-6 text-white/60 text-[8px] md:text-sm tracking-[0.15em] md:tracking-[0.2em]">
-                INSIDE THE UNIVERSE.
-              </p>
+      {/* Hero Section - Mismo estilo que Vision Gallery */}
+      <section className="pt-24 pb-8 px-4 md:px-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-8 items-center">
+          <div>
+            <span className="text-white/60 text-[8px] md:text-xs tracking-[0.2em] block mb-2 md:mb-4">GOLDEN BACKSTAGE</span>
+            <h1 className="text-2xl md:text-7xl font-light tracking-tight leading-none mb-2 md:mb-6 text-amber-100" style={{ fontFamily: 'serif' }}>
+              GOLDEN<br />BACKSTAGE
+            </h1>
+            <div className="flex items-center gap-1.5 md:gap-2 mb-2 md:mb-4">
+              <div className="w-4 md:w-8 h-px bg-amber-500/30"></div>
+              <svg className="w-2 md:w-3 h-2 md:h-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
+              </svg>
             </div>
+            <p className="text-white/60 text-[8px] md:text-sm tracking-wider leading-relaxed max-w-sm">
+              INSIDE THE UNIVERSE.<br />
+              EXCLUSIVE ACCESS.<br />
+              BEHIND THE SCENES.
+            </p>
           </div>
-          
-          {/* Imagen - Columna derecha en mobile, fondo completo en web */}
-          <div className="relative md:absolute md:inset-0 md:z-0 overflow-hidden">
-            <div
-              className="absolute inset-0 bg-cover"
-              style={{
-                backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0004-L3aDIdQwHCFiyitSfuKr4ora1ur0sB.jpg')`,
-              }}
+          <div className="relative">
+            <img 
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0004-L3aDIdQwHCFiyitSfuKr4ora1ur0sB.jpg"
+              alt="Golden Backstage"
+              className="w-full h-auto object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/80 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-black/30" />
           </div>
         </div>
       </section>
