@@ -102,7 +102,7 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-end pb-12 pt-24">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-end pb-8 md:pb-12 pt-24">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -111,17 +111,17 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
         
-        <div className="relative z-10 px-6 max-w-lg">
-          <p className="text-white/60 text-xs tracking-[0.3em] mb-4">MAISON SWIM</p>
-          <h1 className="text-6xl md:text-7xl font-bold tracking-wide leading-none mb-4">
+        <div className="relative z-10 px-4 md:px-6 max-w-lg">
+          <p className="text-white/60 text-[10px] md:text-xs tracking-[0.3em] mb-2 md:mb-4">MAISON SWIM</p>
+          <h1 className="text-4xl md:text-7xl font-bold tracking-wide leading-none mb-2 md:mb-4">
             <span className="block">SWIM</span>
             <span className="block">WEAR</span>
           </h1>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-px bg-white/40"></div>
+          <div className="flex items-center gap-2 mb-2 md:mb-4">
+            <div className="w-6 md:w-8 h-px bg-white/40"></div>
             <Sparkle />
           </div>
-          <p className="text-white/70 text-sm tracking-wide leading-relaxed">
+          <p className="text-white/70 text-xs md:text-sm tracking-wide leading-relaxed">
             TIMELESS SWIMWEAR.<br />
             CRAFTED FOR THE SUN.<br />
             DESIGNED TO MAKE<br />
@@ -131,13 +131,13 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
       </section>
 
       {/* Category Tabs */}
-      <section className="px-6 py-6 border-b border-white/10">
-        <div className="flex gap-6 overflow-x-auto pb-2 scrollbar-hide">
+      <section className="px-4 md:px-6 py-4 md:py-6 border-b border-white/10">
+        <div className="flex gap-4 md:gap-6 overflow-x-auto pb-2 scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`text-xs tracking-[0.15em] whitespace-nowrap transition-colors ${
+              className={`text-[10px] md:text-xs tracking-[0.15em] whitespace-nowrap transition-colors ${
                 activeCategory === category 
                   ? "text-white border-b-2 border-white pb-1" 
                   : "text-white/50 hover:text-white/80"
@@ -150,24 +150,24 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
       </section>
 
       {/* Featured Collection */}
-      <section className="px-6 py-8">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-sm tracking-[0.2em] text-white/80">FEATURED COLLECTION</h2>
-          <button className="flex items-center gap-2 text-white/60 text-xs tracking-wider hover:text-amber-500 transition-colors">
+      <section className="px-4 md:px-6 py-6 md:py-8">
+        <div className="flex items-center justify-between mb-6 md:mb-8">
+          <h2 className="text-xs md:text-sm tracking-[0.2em] text-white/80">FEATURED COLLECTION</h2>
+          <button className="flex items-center gap-2 text-white/60 text-[10px] md:text-xs tracking-wider hover:text-amber-500 transition-colors">
             VIEW ALL
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
           </button>
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           {products.map((product) => (
             <div 
               key={product.id} 
               className="bg-zinc-900/50 border border-white/10 rounded-lg overflow-hidden"
             >
               {/* Product Header */}
-              <div className="flex items-center justify-between px-3 py-2 text-xs text-white/50">
+              <div className="flex items-center justify-between px-2 md:px-3 py-1.5 md:py-2 text-[10px] md:text-xs text-white/50">
                 <span>{product.edition}</span>
                 <span className="text-green-500">{product.badge}</span>
               </div>
@@ -182,18 +182,19 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
               </div>
               
               {/* Product Info */}
-              <div className="p-3">
-                <h3 className="text-sm font-medium tracking-wide">{product.name}</h3>
-                <p className="text-xs text-white/50 tracking-wide mt-1">{product.color}</p>
-                <p className="text-sm mt-2">${product.price.toFixed(2)} USD</p>
+              <div className="p-2 md:p-3">
+                <h3 className="text-xs md:text-sm font-medium tracking-wide line-clamp-2">{product.name}</h3>
+                <p className="text-[10px] md:text-xs text-white/50 tracking-wide mt-0.5 md:mt-1">{product.color}</p>
+                <p className="text-xs md:text-sm mt-1 md:mt-2">${product.price.toFixed(2)} USD</p>
                 
                 {/* Buy Button */}
                 <button
                   onClick={() => handleWhatsAppBuy(product)}
-                  className="w-full mt-3 flex items-center justify-center gap-2 bg-zinc-800 hover:bg-zinc-700 border border-white/10 rounded-full py-2.5 text-xs tracking-wider transition-colors"
+                  className="w-full mt-2 md:mt-3 flex items-center justify-center gap-1.5 md:gap-2 bg-zinc-800 hover:bg-zinc-700 border border-white/10 rounded-full py-2 md:py-2.5 text-[10px] md:text-xs tracking-wider transition-colors"
                 >
                   <WhatsAppIcon />
-                  BUY ON WHATSAPP
+                  <span className="hidden sm:inline">BUY ON WHATSAPP</span>
+                  <span className="sm:hidden">COMPRAR</span>
                 </button>
               </div>
             </div>
@@ -202,23 +203,23 @@ export default function MaisonSwimDetail({ onNavigate }: MaisonSwimDetailProps) 
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 border-t border-white/10">
-        <div className="text-center mb-8">
+      <footer className="px-4 md:px-6 py-8 md:py-12 border-t border-white/10">
+        <div className="text-center mb-6 md:mb-8">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <p className="text-sm tracking-[0.3em] text-white/60">
+            <p className="text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] text-white/60">
               MADE FOR SUN. DESIGNED TO LAST.
             </p>
           </div>
           <Sparkle />
         </div>
         
-        <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-white/40">
+        <div className="flex flex-wrap items-center justify-between gap-3 md:gap-4 text-[10px] md:text-xs text-white/40">
           <span>© MAISON SWIM 2026</span>
-          <div className="flex gap-6">
+          <div className="flex gap-4 md:gap-6">
             <a href="#" className="hover:text-amber-500 transition-colors">TERMS</a>
             <a href="#" className="hover:text-amber-500 transition-colors">PRIVACY</a>
             <a href="#" className="hover:text-amber-500 transition-colors">FAQ</a>
-            <a href="#" className="hover:text-amber-500 transition-colors">GLOBAL</a>
+            <a href="#" className="hover:text-amber-500 transition-colors hidden sm:inline">GLOBAL</a>
           </div>
         </div>
       </footer>

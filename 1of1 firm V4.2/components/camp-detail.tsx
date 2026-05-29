@@ -66,30 +66,30 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
         {/* Hero Content */}
-        <div className="relative z-10 p-6 md:p-12 pb-12 md:pb-16 w-full max-w-2xl">
-          <p className="text-white/70 text-xs tracking-[0.3em] mb-4">1 OF 1 UNIVERSE</p>
+        <div className="relative z-10 p-4 md:p-12 pb-8 md:pb-16 w-full max-w-2xl">
+          <p className="text-white/70 text-[10px] md:text-xs tracking-[0.3em] mb-2 md:mb-4">1 OF 1 UNIVERSE</p>
           
-          <h1 className="text-6xl md:text-[72px] font-light tracking-[0.3em] mb-6">
+          <h1 className="text-4xl md:text-[72px] font-light tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6">
             CAMP
           </h1>
           
-          <p className="text-amber-500 text-sm tracking-[0.2em] mb-6">
+          <p className="text-amber-500 text-xs md:text-sm tracking-[0.2em] mb-4 md:mb-6">
             ARTISTS / GROWTH
           </p>
           
-          <div className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-px bg-white/30" />
-            <svg className="w-3 h-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+          <div className="flex items-center gap-2 mb-4 md:mb-6">
+            <div className="w-6 md:w-8 h-px bg-white/30" />
+            <svg className="w-2.5 md:w-3 h-2.5 md:h-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
             </svg>
           </div>
           
-          <p className="text-white/80 text-sm leading-relaxed mb-8">
+          <p className="text-white/80 text-xs md:text-sm leading-relaxed mb-6 md:mb-8">
             For emerging and<br />
             established artists.
           </p>
           
-          <div className="flex items-center gap-8 text-xs tracking-[0.2em]">
+          <div className="flex items-center gap-4 md:gap-8 text-[10px] md:text-xs tracking-[0.2em]">
             <span className="text-amber-500">CREATE.</span>
             <span className="text-amber-500">INSPIRE.</span>
             <span className="text-amber-500">EVOLVE.</span>
@@ -98,19 +98,19 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
       </section>
 
       {/* Next Camps Section */}
-      <section className="px-6 md:px-12 py-16 bg-black">
-        <h2 className="text-white/60 text-xs tracking-[0.3em] mb-12">NEXT CAMPS</h2>
+      <section className="px-4 md:px-12 py-12 md:py-16 bg-black">
+        <h2 className="text-white/60 text-[10px] md:text-xs tracking-[0.3em] mb-8 md:mb-12">NEXT CAMPS</h2>
         
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {camps.map((camp) => (
-            <div key={camp.number} className="flex items-start gap-6 border-b border-white/10 pb-8">
-              <span className="text-amber-500 text-2xl md:text-3xl font-light">{camp.number}</span>
+            <div key={camp.number} className="flex items-start gap-4 md:gap-6 border-b border-white/10 pb-6 md:pb-8">
+              <span className="text-amber-500 text-xl md:text-3xl font-light">{camp.number}</span>
               <div className="flex-1">
-                <div className="border-l-2 border-amber-500/50 pl-6">
-                  <h3 className="text-2xl md:text-4xl font-light tracking-wider mb-2" style={{ fontFamily: "serif" }}>
+                <div className="border-l-2 border-amber-500/50 pl-4 md:pl-6">
+                  <h3 className="text-lg md:text-4xl font-light tracking-wider mb-1 md:mb-2" style={{ fontFamily: "serif" }}>
                     {camp.dates}
                   </h3>
-                  <p className="text-white/50 text-xs tracking-[0.2em]">{camp.location}</p>
+                  <p className="text-white/50 text-[10px] md:text-xs tracking-[0.2em]">{camp.location}</p>
                 </div>
               </div>
             </div>
@@ -118,11 +118,11 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
         </div>
 
         {/* Apply CTA */}
-        <div className="mt-16">
-          <p className="text-white/60 text-xs tracking-[0.3em] mb-4">LIMITED SPOTS.</p>
-          <button className="w-full border border-white/30 py-4 flex items-center justify-center gap-4 hover:border-amber-500 hover:text-amber-500 transition-all duration-300 group">
-            <span className="text-sm tracking-[0.3em]">APPLY NOW</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        <div className="mt-12 md:mt-16">
+          <p className="text-white/60 text-[10px] md:text-xs tracking-[0.3em] mb-3 md:mb-4">LIMITED SPOTS.</p>
+          <button className="w-full border border-white/30 py-3 md:py-4 flex items-center justify-center gap-3 md:gap-4 hover:border-amber-500 hover:text-amber-500 transition-all duration-300 group">
+            <span className="text-xs md:text-sm tracking-[0.3em]">APPLY NOW</span>
+            <ArrowRight className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </section>
@@ -131,7 +131,7 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
       <section className="overflow-hidden">
         <div className="flex">
           {galleryImages.map((img, index) => (
-            <div key={index} className="w-1/2 md:w-1/4 aspect-square flex-shrink-0">
+            <div key={index} className="w-1/4 md:w-1/4 aspect-square flex-shrink-0">
               <img
                 src={img}
                 alt={`Camp gallery ${index + 1}`}
@@ -143,14 +143,14 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 md:px-12 py-8 bg-black border-t border-white/10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <p className="text-white/50 text-xs tracking-[0.15em]">
+      <footer className="px-4 md:px-12 py-6 md:py-8 bg-black border-t border-white/10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
+          <p className="text-white/50 text-[10px] md:text-xs tracking-[0.15em]">
             FIRST EDITION — FEBRUARY 2025
           </p>
-          <div className="text-right">
-            <p className="text-white/70 text-xs tracking-[0.15em]">THIS IS NOT FOR EVERYONE.</p>
-            <p className="text-amber-500 text-xs tracking-[0.15em]">#1UNIQUEEXPERIENCE</p>
+          <div className="text-left md:text-right">
+            <p className="text-white/70 text-[10px] md:text-xs tracking-[0.15em]">THIS IS NOT FOR EVERYONE.</p>
+            <p className="text-amber-500 text-[10px] md:text-xs tracking-[0.15em]">#1UNIQUEEXPERIENCE</p>
           </div>
         </div>
       </footer>

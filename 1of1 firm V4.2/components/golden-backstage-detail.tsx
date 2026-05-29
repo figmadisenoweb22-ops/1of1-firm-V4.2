@@ -84,7 +84,7 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-end">
+      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -93,30 +93,30 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
         
-        <div className="relative z-10 p-6 md:p-12 pb-12 md:pb-16">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
+        <div className="relative z-10 p-4 md:p-12 pb-8 md:pb-16">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
             GOLDEN
           </h1>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
             BACKSTAGE
           </h1>
-          <p className="mt-6 text-white/60 text-sm tracking-[0.2em]">
+          <p className="mt-4 md:mt-6 text-white/60 text-xs md:text-sm tracking-[0.2em]">
             INSIDE THE UNIVERSE.
           </p>
         </div>
       </section>
 
       {/* Exclusive Content Section */}
-      <section className="px-6 md:px-12 py-12 md:py-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-sm tracking-[0.2em] text-white/80">EXCLUSIVE CONTENT</h2>
-          <button className="flex items-center gap-2 text-amber-500 text-xs tracking-[0.15em] hover:text-amber-400 transition-colors">
+      <section className="px-4 md:px-12 py-8 md:py-16">
+        <div className="flex items-center justify-between mb-6 md:mb-8">
+          <h2 className="text-xs md:text-sm tracking-[0.2em] text-white/80">EXCLUSIVE CONTENT</h2>
+          <button className="flex items-center gap-2 text-amber-500 text-[10px] md:text-xs tracking-[0.15em] hover:text-amber-400 transition-colors">
             VIEW ALL
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
           </button>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {exclusiveContent.map((video) => (
             <div key={video.id} className="group cursor-pointer">
               <div className="relative aspect-square overflow-hidden rounded-lg border border-amber-500/20">
@@ -128,38 +128,38 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
                 
                 {/* Play button and duration */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
-                  <button className="w-8 h-8 rounded-full border border-amber-500 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-black transition-all">
-                    <Play className="w-3 h-3 ml-0.5" fill="currentColor" />
+                <div className="absolute bottom-2 md:bottom-3 left-2 md:left-3 right-2 md:right-3 flex items-center justify-between">
+                  <button className="w-6 md:w-8 h-6 md:h-8 rounded-full border border-amber-500 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-black transition-all">
+                    <Play className="w-2 md:w-3 h-2 md:h-3 ml-0.5" fill="currentColor" />
                   </button>
-                  <span className="text-white/80 text-xs">{video.duration}</span>
+                  <span className="text-white/80 text-[10px] md:text-xs">{video.duration}</span>
                 </div>
               </div>
               
-              <div className="mt-3">
-                <h3 className="text-white text-sm font-medium tracking-wide">{video.title}</h3>
-                <p className="text-white/50 text-xs tracking-wide mt-1">{video.subtitle}</p>
+              <div className="mt-2 md:mt-3">
+                <h3 className="text-white text-xs md:text-sm font-medium tracking-wide line-clamp-1">{video.title}</h3>
+                <p className="text-white/50 text-[10px] md:text-xs tracking-wide mt-0.5 md:mt-1 line-clamp-1">{video.subtitle}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Moments Section */}
-      <section className="px-6 md:px-12 py-12 md:py-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-sm tracking-[0.2em] text-white/80">MOMENTS</h2>
-          <button className="flex items-center gap-2 text-amber-500 text-xs tracking-[0.15em] hover:text-amber-400 transition-colors">
+{/* Moments Section */}
+      <section className="px-4 md:px-12 py-8 md:py-16">
+        <div className="flex items-center justify-between mb-6 md:mb-8">
+          <h2 className="text-xs md:text-sm tracking-[0.2em] text-white/80">MOMENTS</h2>
+          <button className="flex items-center gap-2 text-amber-500 text-[10px] md:text-xs tracking-[0.15em] hover:text-amber-400 transition-colors">
             VIEW GALLERY
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-3 md:w-4 h-3 md:h-4" />
           </button>
         </div>
 
-        <div className="grid grid-cols-5 gap-2 md:gap-3">
+        <div className="grid grid-cols-5 gap-1.5 md:gap-3">
           {moments.slice(0, 5).map((image, index) => (
             <div
               key={index}
-              className="aspect-square overflow-hidden rounded-lg border border-amber-500/10 cursor-pointer group"
+              className="aspect-square overflow-hidden rounded-md md:rounded-lg border border-amber-500/10 cursor-pointer group"
             >
               <img
                 src={image}
@@ -169,11 +169,11 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-5 gap-2 md:gap-3 mt-2 md:mt-3">
+        <div className="grid grid-cols-5 gap-1.5 md:gap-3 mt-1.5 md:mt-3">
           {moments.slice(5, 10).map((image, index) => (
             <div
               key={index + 5}
-              className="aspect-square overflow-hidden rounded-lg border border-amber-500/10 cursor-pointer group"
+              className="aspect-square overflow-hidden rounded-md md:rounded-lg border border-amber-500/10 cursor-pointer group"
             >
               <img
                 src={image}
@@ -186,18 +186,18 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
       </section>
 
       {/* Footer Tagline */}
-      <section className="py-12 md:py-16 text-center">
-        <p className="text-amber-500/80 text-xs md:text-sm tracking-[0.3em]">
+      <section className="py-8 md:py-16 text-center">
+        <p className="text-amber-500/80 text-[10px] md:text-sm tracking-[0.2em] md:tracking-[0.3em]">
           CAPTURED DURING THE EXPERIENCE.
         </p>
-        <div className="w-12 h-px bg-amber-500/30 mx-auto mt-6" />
+        <div className="w-8 md:w-12 h-px bg-amber-500/30 mx-auto mt-4 md:mt-6" />
       </section>
 
       {/* Footer */}
-      <footer className="px-6 md:px-12 py-8 border-t border-white/10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-white/40 text-xs tracking-wider">
-          <p>&copy; 10F1 FIRM 2026</p>
-          <div className="flex items-center gap-6">
+      <footer className="px-4 md:px-12 py-6 md:py-8 border-t border-white/10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 md:gap-4 text-white/40 text-[10px] md:text-xs tracking-wider">
+          <p>© 10F1 FIRM 2026</p>
+          <div className="flex items-center gap-4 md:gap-6">
             <a href="#" className="hover:text-amber-500 transition-colors">TERMS</a>
             <a href="#" className="hover:text-amber-500 transition-colors">PRIVACY</a>
           </div>

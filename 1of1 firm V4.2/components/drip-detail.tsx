@@ -61,20 +61,20 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
       onClick={onClick}
       className="group text-left w-full"
     >
-      <div className="relative aspect-square overflow-hidden bg-neutral-900 mb-4">
+      <div className="relative aspect-square overflow-hidden bg-neutral-900 mb-2 md:mb-4">
         <img 
           src={product.mainImage} 
           alt={product.name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <span className="absolute top-4 left-4 text-white/60 text-xs tracking-[0.2em]">
+        <span className="absolute top-2 left-2 md:top-4 md:left-4 text-white/60 text-[10px] md:text-xs tracking-[0.2em]">
           {product.drop}
         </span>
       </div>
-      <h3 className="text-white text-lg tracking-wide font-light mb-1">{product.name}</h3>
-      <p className="text-white/50 text-xs tracking-wider mb-2">{product.colorway}</p>
-      <p className="text-white text-sm">{product.price.toLocaleString('es-CO')} COP</p>
+      <h3 className="text-white text-sm md:text-lg tracking-wide font-light mb-1 line-clamp-2">{product.name}</h3>
+      <p className="text-white/50 text-[10px] md:text-xs tracking-wider mb-2">{product.colorway}</p>
+      <p className="text-white text-xs md:text-sm">{product.price.toLocaleString('es-CO')} COP</p>
     </button>
   )
 }
@@ -270,7 +270,7 @@ export default function DripDetail({ onNavigate }: DripDetailProps) {
       {/* Products Grid */}
       <section className="px-4 md:px-8 py-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
             {products.map((product) => (
               <ProductCard 
                 key={product.id} 

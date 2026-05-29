@@ -121,14 +121,14 @@ function ArtworkCard({ artwork }: { artwork: Artwork }) {
   return (
     <div className="group">
       {/* Card Header */}
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-white/60 text-xs tracking-wider">{artwork.number} / {artwork.totalEditions}</span>
-        <span className="text-white/60 text-xs tracking-wider">{artwork.available ? "AVAILABLE" : "SOLD"}</span>
+      <div className="flex items-center justify-between mb-2 md:mb-3">
+        <span className="text-white/60 text-[10px] md:text-xs tracking-wider">{artwork.number} / {artwork.totalEditions}</span>
+        <span className="text-white/60 text-[10px] md:text-xs tracking-wider">{artwork.available ? "AVAILABLE" : "SOLD"}</span>
       </div>
 
       {/* Framed Image */}
-      <div className="relative bg-neutral-900 p-4 mb-4">
-        <div className="relative aspect-[4/3] overflow-hidden border-4 border-neutral-700 shadow-2xl">
+      <div className="relative bg-neutral-900 p-2 md:p-4 mb-2 md:mb-4">
+        <div className="relative aspect-[4/3] overflow-hidden border-2 md:border-4 border-neutral-700 shadow-2xl">
           <img 
             src={artwork.image} 
             alt={artwork.name}
@@ -138,19 +138,20 @@ function ArtworkCard({ artwork }: { artwork: Artwork }) {
       </div>
 
       {/* Artwork Info */}
-      <h3 className="text-white text-base tracking-wide font-medium mb-1">{artwork.name}</h3>
-      <p className="text-white/50 text-xs tracking-wider mb-2">{artwork.type}</p>
-      <p className="text-white text-sm mb-4">${artwork.price.toFixed(2)} {artwork.currency}</p>
+      <h3 className="text-white text-sm md:text-base tracking-wide font-medium mb-1 line-clamp-1">{artwork.name}</h3>
+      <p className="text-white/50 text-[10px] md:text-xs tracking-wider mb-1 md:mb-2 line-clamp-1">{artwork.type}</p>
+      <p className="text-white text-xs md:text-sm mb-2 md:mb-4">${artwork.price.toFixed(2)} {artwork.currency}</p>
 
       {/* Buy Button */}
       <a 
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center gap-3 w-full py-3 bg-neutral-900 border border-neutral-700 text-white text-xs tracking-[0.15em] hover:bg-neutral-800 hover:border-amber-500/50 transition-all duration-300"
+        className="flex items-center justify-center gap-2 md:gap-3 w-full py-2 md:py-3 bg-neutral-900 border border-neutral-700 text-white text-[10px] md:text-xs tracking-[0.1em] md:tracking-[0.15em] hover:bg-neutral-800 hover:border-amber-500/50 transition-all duration-300"
       >
         <WhatsAppIcon />
-        BUY ON WHATSAPP
+        <span className="hidden sm:inline">BUY ON WHATSAPP</span>
+        <span className="sm:hidden">COMPRAR</span>
       </a>
     </div>
   )
@@ -272,7 +273,7 @@ export default function VisionGalleryDetail({ onNavigate }: VisionGalleryDetailP
       {/* Artworks Grid */}
       <section className="px-4 md:px-8 pb-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 gap-3 md:gap-8">
             {filteredArtworks.map((artwork) => (
               <ArtworkCard key={artwork.id} artwork={artwork} />
             ))}
