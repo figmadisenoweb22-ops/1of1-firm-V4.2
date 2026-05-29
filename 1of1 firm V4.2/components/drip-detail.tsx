@@ -264,6 +264,12 @@ export default function DripDetail({ onNavigate }: DripDetailProps) {
           <p className="text-white/60 text-sm tracking-wider max-w-md">
             EXCLUSIVE PIECES. LIMITED DROPS. NO REPLICA. NO RESTOCK.
           </p>
+          <div className="relative">
+            <img 
+              src="https://f005.backblazeb2.com/file/b21of1firm/background/VISIONhome.jpg"
+              alt="Vision Gallery"
+              className="w-full h-auto object-cover"
+            />
         </div>
       </section>
 
