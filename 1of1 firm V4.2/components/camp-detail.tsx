@@ -54,45 +54,51 @@ export default function CampDetail({ onNavigate }: CampDetailProps) {
         onNavigate={onNavigate}
       />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-end">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0014-Ct5bg9GgOF6bXHD5DINx9EVqmEWr5W.jpg')`,
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-
-        {/* Hero Content */}
-        <div className="relative z-10 p-4 md:p-12 pb-8 md:pb-16 w-full max-w-2xl">
-          <p className="text-white/70 text-[10px] md:text-xs tracking-[0.3em] mb-2 md:mb-4">1 OF 1 UNIVERSE</p>
-          
-          <h1 className="text-4xl md:text-[72px] font-light tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6">
-            CAMP
-          </h1>
-          
-          <p className="text-amber-500 text-xs md:text-sm tracking-[0.2em] mb-4 md:mb-6">
-            ARTISTS / GROWTH
-          </p>
-          
-          <div className="flex items-center gap-2 mb-4 md:mb-6">
-            <div className="w-6 md:w-8 h-px bg-white/30" />
-            <svg className="w-2.5 md:w-3 h-2.5 md:h-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
-            </svg>
+      {/* Hero Section - Grid 2 columnas en mobile */}
+      <section className="relative min-h-[50vh] md:min-h-[70vh] pt-20 md:pt-0">
+        <div className="grid grid-cols-2 md:grid-cols-1 min-h-[50vh] md:min-h-[70vh]">
+          {/* Contenido - Columna izquierda en mobile */}
+          <div className="relative z-10 flex flex-col justify-end p-3 md:p-12 pb-6 md:pb-16 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-transparent md:absolute md:inset-0 md:flex md:items-end">
+            <div className="w-full max-w-2xl">
+              <p className="text-white/70 text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-4">1 OF 1 UNIVERSE</p>
+              
+              <h1 className="text-2xl md:text-[72px] font-light tracking-[0.15em] md:tracking-[0.3em] mb-2 md:mb-6">
+                CAMP
+              </h1>
+              
+              <p className="text-amber-500 text-[8px] md:text-sm tracking-[0.15em] md:tracking-[0.2em] mb-2 md:mb-6">
+                ARTISTS / GROWTH
+              </p>
+              
+              <div className="flex items-center gap-1.5 md:gap-2 mb-2 md:mb-6">
+                <div className="w-4 md:w-8 h-px bg-white/30" />
+                <svg className="w-2 md:w-3 h-2 md:h-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" />
+                </svg>
+              </div>
+              
+              <p className="text-white/80 text-[8px] md:text-sm leading-relaxed mb-3 md:mb-8">
+                For emerging and<br />
+                established artists.
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-2 md:gap-8 text-[7px] md:text-xs tracking-[0.15em] md:tracking-[0.2em]">
+                <span className="text-amber-500">CREATE.</span>
+                <span className="text-amber-500">INSPIRE.</span>
+                <span className="text-amber-500">EVOLVE.</span>
+              </div>
+            </div>
           </div>
           
-          <p className="text-white/80 text-xs md:text-sm leading-relaxed mb-6 md:mb-8">
-            For emerging and<br />
-            established artists.
-          </p>
-          
-          <div className="flex items-center gap-4 md:gap-8 text-[10px] md:text-xs tracking-[0.2em]">
-            <span className="text-amber-500">CREATE.</span>
-            <span className="text-amber-500">INSPIRE.</span>
-            <span className="text-amber-500">EVOLVE.</span>
+          {/* Imagen - Columna derecha en mobile */}
+          <div className="relative md:absolute md:inset-0 md:-z-10">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0014-Ct5bg9GgOF6bXHD5DINx9EVqmEWr5W.jpg')`,
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/50 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-transparent" />
           </div>
         </div>
       </section>

@@ -83,26 +83,34 @@ export default function GoldenBackstageDetail({ onNavigate }: GoldenBackstageDet
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-end">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0004-L3aDIdQwHCFiyitSfuKr4ora1ur0sB.jpg')`
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
-        
-        <div className="relative z-10 p-4 md:p-12 pb-8 md:pb-16">
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
-            GOLDEN
-          </h1>
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
-            BACKSTAGE
-          </h1>
-          <p className="mt-4 md:mt-6 text-white/60 text-xs md:text-sm tracking-[0.2em]">
-            INSIDE THE UNIVERSE.
-          </p>
+      {/* Hero Section - Grid 2 columnas en mobile */}
+      <section className="relative min-h-[50vh] md:min-h-[70vh] pt-20 md:pt-0">
+        <div className="grid grid-cols-2 md:grid-cols-1 min-h-[50vh] md:min-h-[70vh]">
+          {/* Contenido - Columna izquierda en mobile */}
+          <div className="relative z-10 flex flex-col justify-end p-3 md:p-12 pb-6 md:pb-16 bg-gradient-to-r from-black via-black/90 to-transparent md:bg-transparent md:absolute md:inset-0 md:flex md:items-end">
+            <div>
+              <h1 className="text-2xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
+                GOLDEN
+              </h1>
+              <h1 className="text-2xl md:text-7xl lg:text-8xl font-light tracking-tight text-amber-100">
+                BACKSTAGE
+              </h1>
+              <p className="mt-2 md:mt-6 text-white/60 text-[8px] md:text-sm tracking-[0.15em] md:tracking-[0.2em]">
+                INSIDE THE UNIVERSE.
+              </p>
+            </div>
+          </div>
+          
+          {/* Imagen - Columna derecha en mobile */}
+          <div className="relative md:absolute md:inset-0 md:-z-10">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG-20260508-WA0004-L3aDIdQwHCFiyitSfuKr4ora1ur0sB.jpg')`
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/50 md:bg-gradient-to-t md:from-black md:via-black/60 md:to-black/30" />
+          </div>
         </div>
       </section>
 
